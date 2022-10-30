@@ -1,0 +1,129 @@
+*
+{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html
+{
+    scroll-behavior: smooth;
+}
+
+body
+{
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url(img/andre-tan-Fr4K1_4c5oQ-unsplash.jpg);
+    background-position: center center;
+    background-size: cover;
+    transition: 0.4s ease;
+}
+
+body::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.067);
+    z-index: -1;
+}
+
+.slider-container
+{
+    box-shadow: 0 0 15px 0 rgb(47, 47, 47);
+    height: 70vh;
+    width: 70vw;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider-container p
+{
+    visibility: visible;
+    font-weight: 900;
+    color: #fff;
+    z-index: 1;
+    top: -5vh;
+    left: 10vw;
+    width: 60%;
+    margin: 30% 10%;
+    position: relative;
+    text-align: center;
+    text-indent: 25px;
+    display: grid;
+    align-items: center;
+    justify-self:baseline;
+    
+}
+
+.slider-container p.act
+{
+    transition: 0.5s ease-in-out;
+    color: rgb(0, 0, 0);
+}
+
+.slide
+{
+    opacity: 0;
+    height: 100vh;
+    width: 100vw;
+    background-position: center center;
+    background-size: cover;
+    position: absolute;
+    top: -15vh;
+    left: -15vw;
+    transition: 0.4s ease;
+    z-index: 1;
+}
+
+.slide.active
+{
+    opacity: 1;
+}
+
+.arrow 
+{
+    position: fixed;
+    background-color: transparent;
+    color: #fff;
+    padding: 20px;
+    font-size: 30px;
+    border: 0.1rem solid #373737;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 0;
+}
+  
+.arrow:focus 
+{
+    outline: 0;
+}
+  
+.left-arrow 
+{
+    left: calc(15vw - 65px);
+}
+  
+.right-arrow 
+{
+    right: calc(15vw - 65px);
+}
+
+.text
+{
+    width: 200px;
+    max-width: 250px;
+    margin-top: 50px;
+
+}
